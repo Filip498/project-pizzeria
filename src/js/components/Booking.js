@@ -44,7 +44,7 @@ class Booking{
       eventsCurrent: settings.db.url + '/' + settings.db.events 
                                      + '?' + params.eventsCurrent.join('&'),
       eventsRepeat: settings.db.url  + '/' + settings.db.events 
-                                     + '?' + params.eventsCurrent.join('&'),
+                                     + '?' + params.eventsRepeat.join('&'),
     };
 
     Promise.all([
@@ -240,14 +240,14 @@ class Booking{
     const thisBooking = this;
     const url = settings.db.url + '/' + settings.db.bookings;
     const payload = {};
-      payload.date = thisBooking.datePicker.value;
-      payload.hour = thisBooking.hourPicker.value;
-      payload.table = parseInt(thisBooking.selected);
-      payload.duration = parseInt(thisBooking.hoursAmount.value);
-      payload.ppl = parseInt(thisBooking.peopleAmount.value);
-      payload.starters = [];
-      payload.phone = thisBooking.dom.phone.value;
-      payload.address = thisBooking.dom.address.value;
+    payload.date = thisBooking.datePicker.value;
+    payload.hour = thisBooking.hourPicker.value;
+    payload.table = parseInt(thisBooking.selected);
+    payload.duration = parseInt(thisBooking.hoursAmount.value);
+    payload.ppl = parseInt(thisBooking.peopleAmount.value);
+    payload.starters = [];
+    payload.phone = thisBooking.dom.phone.value;
+    payload.address = thisBooking.dom.address.value;
     
 
     for(let starter of thisBooking.dom.starters) {
