@@ -173,10 +173,11 @@
       }
   
     }
+    
     &.selected {
-			color: darken($color-success, 50%);
+      color: darken($color-success, 50%);
 
-			&::after {
+      &::after {
         position: absolute;
         content: '';
         width: 100%;
@@ -185,9 +186,9 @@
         top: 0;
         background: $color-success;
         opacity: 0.4;
-				border: 2px;
+        border: 2px;
       }
-		}
+    }
   }
   
   [data-table="1"] {

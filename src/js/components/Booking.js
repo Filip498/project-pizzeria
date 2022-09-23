@@ -256,7 +256,6 @@ class Booking{
       }
     }
 
-    thisBooking.booked[thisBooking.date][thisBooking.hour].push(thisBooking.tableSelected);
     const options = {
       method: 'POST',
       headers: {
