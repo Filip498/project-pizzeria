@@ -19,9 +19,9 @@ class Home{
   }
 
   initWidgets(){
-    const thisHome = this;
+    const elem = document.querySelector('.main-carousel');
 
-    const flicKity = new Flickity( thisHome.dom.wrapper.carouselWidget, { /* eslint-disable-line */
+    new Flickity(elem, { /* eslint-disable-line */
       // options
       cellAlign: 'left',
       contain: true,
