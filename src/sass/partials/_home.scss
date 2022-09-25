@@ -115,7 +115,6 @@ h4 {
   }
 }
   
-.gallery-img,
 .main-carousel img {
   object-fit: cover;
   width: 193px;
@@ -142,63 +141,96 @@ h4 {
 /* Gallery */
   
 .gallery {
+  height: auto;
   display: flex;
-  flex-direction: row;
-  margin: ($base-size/2) auto;
-  justify-content: space-between;
-  gap: 12px;
+  flex-direction: column;
 }
-  
-.picture-wrapper {
+
+.gallery .row {
+  display: flex;
+  width: 100%;
+}
+
+.gallery-content {
   position: relative;
-}
-  
-.picture-wrapper::after {
-  position: absolute;
-  padding: $base-size/4 $base-size/2;
-  width: 193px;
-  height: 193px;
-  border-radius: $radius;
-  content: '';
-  background-color: $color-dark;
-  opacity: 0;
-  z-index: 0;
-  top: 0;
-}
-  
-.picture-wrapper:hover::after {
-  position: absolute;
-  opacity: 60%;
-  display: block;
-}
-  
-.icons-wrapper {
-  display: flex;
-  position: absolute;
-  width: 193px;
-  height: 193px;
-  top: 40%;
-  left: 40%;
-}
-  
-.icons-wrapper a {
-  color: $color-light;
-  font-size: 20px;
-  text-decoration: none;
+  transition: transform 1s;
+  float: left;
+  width: 33.33333%;
+  height: 20vh;
+  background-position: center center;
+  background-size: cover;
+  margin: 5px;
   z-index: 1;
-  margin-right: 8px;
-  margin-top: 2px;
-  display: none;
+  border-radius: 8px;
+}
+
+.icon-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 
 }
-  
-.icons-wrapper a:hover {
-  color: $color-main;
+
+.icon-center i{
+  margin: auto auto;
+  color: #ffffff;
+
 }
-  
-.picture-wrapper:hover .icons-wrapper a{
-  display: inline;
-  text-decoration: none;
+
+.gallery-content:hover::before {
+  position: absolute;
+  content: "";
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  border-radius: 8px;
+}
+
+.gallery-content a {
+  z-index: 10;
+}
+
+.gallery-img1 {
+  background-image: url(../images/home/pizza-4.jpg);
+}
+
+.gallery-img2 {
+  background-image: url(../images/home/pizza-5.jpg);
+}
+
+.gallery-img3 {
+  background-image: url(../images/home/pizza-6.jpg);
+}
+
+.gallery-img4 {
+  background-image: url(../images/home/pizza-7.jpg);
+}
+
+.gallery-img5 {
+  background-image: url(../images/home/pizza-8.jpg);
+}
+
+.gallery-img6 {
+  background-image: url(../images/home/pizza-9.jpg);
+}
+
+.gallery-content i { /* in all other case hide it */
+  visibility: hidden;
+  margin: 3px;
+  transform: scale(0.1);
+  transition: 1s;
+}
+
+.gallery-content:hover i { /* when link is hovered select i */
+  visibility: visible;
+  color: #ff6b6b;
+  transform: scale(1);
+}
+
+.gallery-content a:hover i { /* in all other case hide it */
+  color: red;
 }
   
 /* Instagram Link */
