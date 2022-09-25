@@ -32,8 +32,6 @@ h4 {
   align-items: center;
   justify-content: center;
   border-radius: 5px;
-  width: 300px;
-  height: 120px;
   position: relative;
 }
   
@@ -154,9 +152,8 @@ h4 {
 .gallery-content {
   position: relative;
   transition: transform 1s;
-  float: left;
   width: 33.33333%;
-  height: 20vh;
+  height: 200px;
   background-position: center center;
   background-size: cover;
   margin: 5px;
